@@ -1,15 +1,9 @@
+import SolatesLinks from "./components/SolatesLinks";
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </div>
-    </>
-  )
+    <div className="min-h-screen flex items-center justify-center p-6">
+      <SolatesLinks />
+    </div>
+  );
 }
-
-export default App
