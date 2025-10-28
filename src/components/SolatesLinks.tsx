@@ -37,13 +37,13 @@ const links: LinkItem[] = [
   },
   {
     title: "Economic Circuit with $OLA",
-    url: "src/docs/Solates_Economic_Circuit.pdf",
+    url: "/docs/Solates_Economic_Circuit.pdf",
     type: "doc",
     icon: <FileText size={18} className="opacity-70" />,
   },
   {
     title: "Roadmap & Sustainability Model",
-    url: "src/docs/Solates_Roadmap_Economic_Sustainability_Model.pdf",
+    url: "/docs/Solates_Roadmap_Economic_Sustainability_Model.pdf",
     type: "doc",
     icon: <FileText size={18} className="opacity-70" />,
   },
@@ -55,7 +55,7 @@ const links: LinkItem[] = [
   },
   {
     title: "YouTube Channel",
-    url: "https://www.youtube.com/watch?v=pWQQOrLlQIE",
+    url: "https://www.youtube.com/@SolatesDefi",
     type: "social",
     icon: <ExternalLink size={18} className="opacity-70" />,
   },
