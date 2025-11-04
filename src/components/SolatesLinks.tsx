@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, FileText, Twitter } from "lucide-react";
 import type { JSX } from "react";
-import solatesLogo from "../assets/logo-tr.png"; // 🪩 Asegurate de tener tu logo aquí
+import solatesLogo from "../assets/logo-tr.png"; 
 
 interface LinkItem {
   title: string;
@@ -11,6 +11,7 @@ interface LinkItem {
 }
 
 const links: LinkItem[] = [
+  // === LIVE DEMOS & REPOS ===
   {
     title: "Live Demo – Solates App",
     url: "https://solates.vercel.app/",
@@ -35,6 +36,8 @@ const links: LinkItem[] = [
     type: "repo",
     icon: <Github size={18} className="opacity-70" />,
   },
+
+  // === DOCUMENTATION ===
   {
     title: "Economic Circuit with $OLA",
     url: "/docs/Solates_Economic_Circuit.pdf",
@@ -47,6 +50,8 @@ const links: LinkItem[] = [
     type: "doc",
     icon: <FileText size={18} className="opacity-70" />,
   },
+
+  // === SOCIALS ===
   {
     title: "Twitter / X",
     url: "https://x.com/SolatesDefi",
@@ -91,7 +96,7 @@ export default function SolatesLinks() {
         <div className="aspect-video">
           <iframe
             className="w-full h-full"
-            src="https://www.youtube.com/embed/pWQQOrLlQIE" // ⚠️ Reemplazá con el ID de tu video
+            src="https://www.youtube.com/embed/pWQQOrLlQIE"
             title="Solates Pitch Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -109,9 +114,27 @@ export default function SolatesLinks() {
         <h1 className="text-5xl font-bold tracking-wide">Solates</h1>
       </motion.div>
 
-      <p className="text-base text-slate-400 mb-10 text-center">
+      <p className="text-base text-slate-400 mb-3 text-center">
         DeFi Education & Incentive Platform built on Solana
       </p>
+
+      {/* === Status line === */}
+      <motion.p
+        initial={{ opacity: 0, y: -5 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-sm text-amber-300/80 italic text-center mb-10"
+      >
+        🚀 Development Phase 2 started — follow updates on{" "}
+        <a
+          href="https://x.com/SolatesDefi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-dotted hover:text-amber-200 transition"
+        >
+          X
+        </a>
+      </motion.p>
 
       <div className="w-full max-w-4xl space-y-4">
         <SectionTitle text="Live Demos & Repositories" />
