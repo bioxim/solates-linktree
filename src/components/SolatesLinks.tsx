@@ -6,7 +6,7 @@ import solatesLogo from "../assets/logo-tr.png";
 interface LinkItem {
   title: string;
   url: string;
-  type: "demo" | "repo" | "doc" | "social";
+  type: "demo" | "repo" | "doc" | "social" | "prog";
   icon: JSX.Element;
 }
 
@@ -34,6 +34,14 @@ const links: LinkItem[] = [
     title: "GitHub – Solates Mining Room Repo",
     url: "https://github.com/bioxim/solates-mining",
     type: "repo",
+    icon: <Github size={18} className="opacity-70" />,
+  },
+
+  // === PROGRAMS ===
+  {
+    title: "Solates Programs",
+    url: "https://github.com/bioxim/solates-contracts/",
+    type: "prog",
     icon: <Github size={18} className="opacity-70" />,
   },
 
@@ -143,6 +151,13 @@ export default function SolatesLinks() {
           .map((link, i) => (
             <LinkCard key={i} {...link} />
           ))}
+        
+        <SectionTitle text="Programs" />
+        {links
+          .filter((l) => l.type === "prog")
+          .map((link, i) => (
+            <LinkCard key={i} {...link} />
+          ))}                
 
         <SectionTitle text="Documentation" />
         {links
