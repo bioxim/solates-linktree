@@ -11,39 +11,45 @@ interface LinkItem {
 }
 
 const links: LinkItem[] = [
-  // === LIVE DEMOS & REPOS ===
+  // === LIVE LINKS ===
   {
-    title: "Live Demo – Solates Main",
+    title: "Solates Main",
     url: "https://solates.vercel.app/",
     type: "demo",
     icon: <ExternalLink size={18} className="opacity-70" />,
   },
   {
+    title: "Solates News Platform",
+    url: "https://solates-news.vercel.app/",
+    type: "demo",
+    icon: <ExternalLink size={18} className="opacity-70" />,
+  },
+  /*{
     title: "GitHub – Main Repo",
     url: "https://github.com/bioxim/solates-proto",
     type: "repo",
     icon: <Github size={18} className="opacity-70" />,
   },
-  {
+   {
     title: "Live Demo – Solates Platform",
     url: "https://solates-mining.vercel.app/",
     type: "demo",
     icon: <ExternalLink size={18} className="opacity-70" />,
-  },
+  }, 
   {
     title: "GitHub – Platform Repo",
     url: "https://github.com/bioxim/solates-mining",
     type: "repo",
     icon: <Github size={18} className="opacity-70" />,
-  },
+  },*/
 
   // === PROGRAMS ===
-  {
+  /*{
     title: "Solates Programs",
     url: "https://github.com/bioxim/solates-contracts/",
     type: "prog",
     icon: <Github size={18} className="opacity-70" />,
-  },
+  },*/
 
   // === TODO: Documentation removed for now ===
   // {
@@ -100,10 +106,10 @@ export default function SolatesLinks() {
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center gap-3 mb-2">
-          <img 
-            src={solatesLogo} 
-            alt="Solates Logo" 
-            className="w-12 h-12 rounded-full shadow-md" 
+          <img
+            src={solatesLogo}
+            alt="Solates Logo"
+            className="w-12 h-12 rounded-full shadow-md"
           />
           <h1 className="text-4xl font-bold tracking-wide">Solates</h1>
         </div>
@@ -134,16 +140,16 @@ export default function SolatesLinks() {
       <div className="w-full max-w-4xl space-y-4">
 
         {/* === LIVE DEMOS & REPOS === */}
-        <SectionTitle text="Live Demos & Repositories" />
+        <SectionTitle text="Main Links" />
         {links
           .filter((l) => l.type === "demo" || l.type === "repo")
           .map((link, i) => <LinkCard key={i} {...link} />)}
 
         {/* === PROGRAMS === */}
-        <SectionTitle text="Programs" />
+        {/* <SectionTitle text="Programs" />
         {links
           .filter((l) => l.type === "prog")
-          .map((link, i) => <LinkCard key={i} {...link} />)}
+          .map((link, i) => <LinkCard key={i} {...link} />)} */}
 
         {/* === SOCIALS === */}
         <SectionTitle text="Socials" />
